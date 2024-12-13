@@ -1,0 +1,204 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eef;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.calendar-header {
+    text-align: center;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.calendar-header button {
+    font-size: 14px;
+    padding: 8px 12px;
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    min-width: 40px;
+    min-height: 40px;
+    touch-action: manipulation;
+}
+
+.search-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#searchDate {
+    padding: 5px;
+    font-size: 16px;
+}
+
+#searchButton {
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#searchResult {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#monthYear {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 10px;
+    min-width: 120px;
+}
+
+#calendar {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+#calendar th, #calendar td {
+    border: 1px solid #ccc;
+    width: 14.28%;
+    text-align: left;
+    vertical-align: top;
+    position: relative;
+}
+
+#calendar th {
+    background-color: #4682b4;
+    color: #fff;
+    padding: 5px;
+    font-size: 14px;
+}
+
+#calendar td {
+    background-color: #fff;
+    padding: 5px;
+    height: 60px;
+}
+
+.day-number {
+    font-weight: bold;
+    margin-bottom: 2px;
+    font-size: 12px;
+}
+
+.shift {
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+    right: 2px;
+    padding: 2px;
+    font-size: 10px;
+    text-align: center;
+    color: #fff;
+    border-radius: 3px;
+}
+
+/* Media Queries per dispositivi mobili */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    .calendar-header button {
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+
+    #monthYear {
+        font-size: 14px;
+        min-width: 100px;
+    }
+
+    #calendar th {
+        font-size: 12px;
+        padding: 3px;
+    }
+
+    #calendar td {
+        height: 50px;
+        padding: 2px;
+    }
+
+    .day-number {
+        font-size: 11px;
+    }
+
+    .shift {
+        font-size: 8px;
+        padding: 1px;
+    }
+}
+
+/* Orientamento landscape */
+@media screen and (max-width: 850px) and (orientation: landscape) {
+    #calendar td {
+        height: 40px;
+    }
+
+    .shift {
+        position: static;
+        margin-top: 2px;
+    }
+}
+
+/* Manteniamo i colori originali dei turni */
+.shift.morning {
+    background-color: #ffa500;
+}
+
+.shift.night {
+    background-color: #1e90ff;
+}
+
+.shift.afternoon {
+    background-color: #32cd32;
+}
+
+/* Dark mode per OLED screens */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #ffffff;
+    }
+
+    #calendar td {
+        background-color: #1e1e1e;
+        border-color: #333;
+    }
+
+    #calendar td.other-month {
+        background-color: #181818;
+    }
+
+    h1 {
+        color: #ffffff;
+    }
+
+    .calendar-header button {
+        background-color: #333;
+        color: #fff;
+        border-color: #444;
+    }
+}

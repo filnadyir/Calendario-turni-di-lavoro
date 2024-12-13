@@ -1,0 +1,42 @@
+<!DOCTYPE html>  
+<html lang="it">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Calendario Turni di Lavoro</title>  
+    <link rel="stylesheet" href="style.css">  
+</head>
+<body>
+    <h1>Calendario Turni di Lavoro</h1>
+    <div class="calendar-header">
+        <button id="prevYear">&laquo;&laquo;</button>
+        <button id="prevMonth">&laquo;</button>
+        <span id="monthYear"></span>
+        <button id="nextMonth">&raquo;</button>
+        <button id="nextYear">&raquo;&raquo;</button>
+    </div>
+    <div class="search-container">
+        <input type="date" id="searchDate">
+        <button id="searchButton">Cerca</button>
+    </div>
+    <div id="searchResult"></div>
+    <table id="calendar">
+        <thead>
+            <tr>
+                <th>Lun</th>
+                <th>Mar</th>
+                <th>Mer</th>
+                <th>Gio</th>
+                <th>Ven</th>
+                <th>Sab</th>
+                <th>Dom</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Il calendario verrà generato dinamicamente -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
